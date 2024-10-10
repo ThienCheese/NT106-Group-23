@@ -1,0 +1,17 @@
+C:\Users\Ngthi\source\repos\Tcp private\bin\Debug\net8.0-windows\Tcp private.exe
+C:\Users\Ngthi\source\repos\Tcp private\bin\Debug\net8.0-windows\Tcp private.deps.json
+C:\Users\Ngthi\source\repos\Tcp private\bin\Debug\net8.0-windows\Tcp private.runtimeconfig.json
+C:\Users\Ngthi\source\repos\Tcp private\bin\Debug\net8.0-windows\Tcp private.dll
+C:\Users\Ngthi\source\repos\Tcp private\bin\Debug\net8.0-windows\Tcp private.pdb
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp_private.ClientForm.resources
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp_private.ServerForm.resources
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.csproj.GenerateResource.cache
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.AssemblyInfoInputs.cache
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.AssemblyInfo.cs
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.csproj.CoreCompileInputs.cache
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.dll
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\refint\Tcp private.dll
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.pdb
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\Tcp private.genruntimeconfig.cache
+C:\Users\Ngthi\source\repos\Tcp private\obj\Debug\net8.0-windows\ref\Tcp private.dll
