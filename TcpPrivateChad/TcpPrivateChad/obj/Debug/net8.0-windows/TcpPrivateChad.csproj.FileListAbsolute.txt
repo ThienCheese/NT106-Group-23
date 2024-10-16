@@ -1,0 +1,16 @@
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\bin\Debug\net8.0-windows\TcpPrivateChad.exe
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\bin\Debug\net8.0-windows\TcpPrivateChad.deps.json
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\bin\Debug\net8.0-windows\TcpPrivateChad.runtimeconfig.json
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\bin\Debug\net8.0-windows\TcpPrivateChad.dll
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\bin\Debug\net8.0-windows\TcpPrivateChad.pdb
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.ServerForm.resources
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.csproj.GenerateResource.cache
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.AssemblyInfoInputs.cache
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.AssemblyInfo.cs
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.csproj.CoreCompileInputs.cache
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.dll
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\refint\TcpPrivateChad.dll
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.pdb
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\TcpPrivateChad.genruntimeconfig.cache
+C:\Users\Ngthi\source\repos\TcpPrivateChad\TcpPrivateChad\obj\Debug\net8.0-windows\ref\TcpPrivateChad.dll
