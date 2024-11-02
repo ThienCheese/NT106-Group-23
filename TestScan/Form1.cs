@@ -419,7 +419,7 @@ namespace TestScan
         private async void btnStartPortScanandListen_Click(object sender, EventArgs e)
         {
 
-            if (comboBox2.Text == "Quét cổng TCP")
+            if (QuetcongCheckBox.Checked)
             {
                 if (isPortScanning) return;
                 isPortScanning = true;
@@ -436,7 +436,7 @@ namespace TestScan
                 cancelPortScanToken = new CancellationTokenSource();
                 ThreadPool.QueueUserWorkItem(state => ExecutePortScan(ipAddressToScan, cancelPortScanToken.Token));
             }
-            else if (comboBox2.Text == "Lắng nghe thông điệp")
+            else if (ListenmesCheckBox.Checked)
             {
                 SelectInterfaceForm selectInterfaceForm = new SelectInterfaceForm();
                 selectInterfaceForm.ShowDialog();
@@ -451,12 +451,12 @@ namespace TestScan
 
             }
             else
-                MessageBox.Show("Vui lòng chọn tính năng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn 1 tính năng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnStopPortScanandListen_Click(object sender, EventArgs e)
         {
-            if (comboBox2.Text=="Quét cổng TCP")
+            if (QuetcongCheckBox.Checked)
             {
                 if (!isPortScanning) return;
                 cancelPortScanToken.Cancel();
@@ -465,7 +465,7 @@ namespace TestScan
                 btnStartPortScanandListen.Enabled = true; // Bật lại nút "Bắt đầu"
                 btnStopPortScanandListen.Enabled = false; // Vô hiệu hóa nút "Dừng"
             }
-            else if (comboBox2.Text == "Lắng nghe thông điệp")
+            else if (ListenmesCheckBox.Checked)
             {
                 cancellationTokenSource.Cancel();
                 btnStartPortScanandListen.Enabled = true; // Bật lại nút "Bắt đầu"
