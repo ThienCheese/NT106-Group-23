@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LastNetworkSniffer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -471,6 +472,12 @@ namespace TestScan
                 btnStartPortScanandListen.Enabled = true; // Bật lại nút "Bắt đầu"
                 btnStopPortScanandListen.Enabled = false; // Vô hiệu hóa nút "Dừng"
             }
+        }
+
+        private void btnNetSni_Click(object sender, EventArgs e)
+        {
+            Sniffer sniffer = new Sniffer();
+            sniffer.ShowDialog();
         }
     }
 }

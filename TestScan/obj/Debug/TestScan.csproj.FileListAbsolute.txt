@@ -46,3 +46,4 @@ D:\Code\Visual Studio\NT106-Group-23\TestScan\obj\Debug\TestScan.csproj.CoreComp
 D:\Code\Visual Studio\NT106-Group-23\TestScan\obj\Debug\TestScan.csproj.Up2Date
 D:\Code\Visual Studio\NT106-Group-23\TestScan\obj\Debug\TestScan.exe
 D:\Code\Visual Studio\NT106-Group-23\TestScan\obj\Debug\TestScan.pdb
+D:\Code\Visual Studio\NT106-Group-23\TestScan\obj\Debug\LastNetworkSniffer.Sniffer.resources

@@ -82,6 +82,12 @@
     <Compile Include="SelectInterfaceForm.Designer.cs">
       <DependentUpon>SelectInterfaceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sniffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sniffer.Designer.cs">
+      <DependentUpon>Sniffer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="SelectInterfaceForm.resx">
       <DependentUpon>SelectInterfaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sniffer.resx">
+      <DependentUpon>Sniffer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

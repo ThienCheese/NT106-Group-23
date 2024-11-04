@@ -1,1 +1,4 @@
-TestScan/obj/Debug
+bin/
+obj/
+.vs/
+
