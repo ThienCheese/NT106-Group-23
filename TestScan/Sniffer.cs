@@ -80,9 +80,9 @@ namespace LastNetworkSniffer
             while(_isCapturing)
             {
                 Capture();
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
                 Stop();
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
             }
         }
         private void InitializeListView()
@@ -116,7 +116,11 @@ namespace LastNetworkSniffer
                 {
                     source = ipPacket.SourceAddress.ToString();
                     destination = ipPacket.DestinationAddress.ToString();
-                    protocol = ipPacket is TcpPacket ? "TCP" : ipPacket is UdpPacket ? "UDP" : "Other";
+                    if (ipPacket.Protocol.ToString() == "TCP")                   
+                        protocol = "TCP";                   
+                    else if (ipPacket.Protocol.ToString() == "UDP")
+                        protocol = "UDP";
+                    else protocol = "Other";
                 }
                 else if (ethernetPacket.PayloadPacket is IPv6Packet ipv6Packet)
                 {
@@ -134,6 +138,7 @@ namespace LastNetworkSniffer
                 item.SubItems.Add(destination);
                 item.SubItems.Add(protocol);
                 item.SubItems.Add(size.ToString());
+                item.SubItems.Add(packet.PayloadData.ToString());
                 listViewPackets.Items.Add(item);
             }));
 
@@ -144,7 +149,7 @@ namespace LastNetworkSniffer
         {
             if (listViewPackets.SelectedItems.Count > 0)
             {
-                var packet = listViewPackets.SelectedItems[0].SubItems[2].Text;
+                var packet = listViewPackets.SelectedItems[0].SubItems[5].Text;
                 textBoxDetails.Text = packet;
             }
         }
@@ -164,8 +169,6 @@ namespace LastNetworkSniffer
                 }
             }
         }
-
-
         private void Sniffer_Load(object sender, EventArgs e)
         {
             InitializeListView();
