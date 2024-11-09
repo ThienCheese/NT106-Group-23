@@ -38,6 +38,7 @@ namespace LastNetworkSniffer
             this.StopBtt = new System.Windows.Forms.Button();
             this.SaveBtt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.treeViewPacketDetails = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // listViewPackets
@@ -68,7 +69,7 @@ namespace LastNetworkSniffer
             // 
             this.button1.BackColor = System.Drawing.Color.Cyan;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(706, 27);
+            this.button1.Location = new System.Drawing.Point(763, 27);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 59);
@@ -81,11 +82,11 @@ namespace LastNetworkSniffer
             // 
             this.textBoxDetails.BackColor = System.Drawing.Color.OldLace;
             this.textBoxDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDetails.Location = new System.Drawing.Point(21, 426);
+            this.textBoxDetails.Location = new System.Drawing.Point(569, 417);
             this.textBoxDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDetails.Name = "textBoxDetails";
             this.textBoxDetails.ReadOnly = true;
-            this.textBoxDetails.Size = new System.Drawing.Size(523, 199);
+            this.textBoxDetails.Size = new System.Drawing.Size(429, 199);
             this.textBoxDetails.TabIndex = 3;
             this.textBoxDetails.Text = "";
             // 
@@ -106,7 +107,7 @@ namespace LastNetworkSniffer
             // 
             this.SaveBtt.BackColor = System.Drawing.Color.LightSalmon;
             this.SaveBtt.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtt.Location = new System.Drawing.Point(884, 572);
+            this.SaveBtt.Location = new System.Drawing.Point(643, 27);
             this.SaveBtt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SaveBtt.Name = "SaveBtt";
             this.SaveBtt.Size = new System.Drawing.Size(114, 53);
@@ -125,11 +126,19 @@ namespace LastNetworkSniffer
             this.label1.TabIndex = 4;
             this.label1.Text = "Chọn giao diện mạng";
             // 
+            // treeViewPacketDetails
+            // 
+            this.treeViewPacketDetails.Location = new System.Drawing.Point(21, 418);
+            this.treeViewPacketDetails.Name = "treeViewPacketDetails";
+            this.treeViewPacketDetails.Size = new System.Drawing.Size(542, 204);
+            this.treeViewPacketDetails.TabIndex = 5;
+            // 
             // Sniffer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 634);
+            this.Controls.Add(this.treeViewPacketDetails);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxDetails);
             this.Controls.Add(this.SaveBtt);
@@ -155,5 +164,6 @@ namespace LastNetworkSniffer
         private Button StopBtt;
         private Button SaveBtt;
         private Label label1;
+        private TreeView treeViewPacketDetails;
     }
 }

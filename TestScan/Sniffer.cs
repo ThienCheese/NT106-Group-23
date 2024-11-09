@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
+
 namespace LastNetworkSniffer
 {
     public partial class Sniffer : Form
@@ -15,11 +16,13 @@ namespace LastNetworkSniffer
         private ICaptureDevice _device;
         private CaptureFileWriterDevice _captureWriter;
         private bool _isCapturing = false;
+
         public Sniffer()
         {
             InitializeComponent();
             LoadNetworkInterfaces();
         }
+
         private void LoadNetworkInterfaces()
         {
             comboBoxInterfaces.Items.Clear();
@@ -28,16 +31,19 @@ namespace LastNetworkSniffer
                 comboBoxInterfaces.Items.Add(dev.Description);
             }
         }
+
         private void StartCapture_Click(object sender, EventArgs e)
         {
             _isCapturing = true;
             Thread thread = new Thread(Repeat);
             thread.Start();
         }
+
         private void StopCapture_Click(object sender, EventArgs e)
         {
             _isCapturing = false;
         }
+
         private void Capture()
         {
             int selectedIndex = comboBoxInterfaces.SelectedIndex;
@@ -50,8 +56,6 @@ namespace LastNetworkSniffer
             _device = CaptureDeviceList.Instance[selectedIndex];
             _device.OnPacketArrival += new PacketArrivalEventHandler(OnPacketArrival);
 
-
-
             _captureWriter = new CaptureFileWriterDevice("captured_packets.pcap");
 
             Task.Run(() =>
@@ -60,13 +64,13 @@ namespace LastNetworkSniffer
                 _device.StartCapture();
             });
         }
+
         private void Stop()
         {
-            if (_device != null) // Ensure device is open and capturing
+            if (_device != null)
             {
                 _device.StopCapture();
                 _device.Close();
-
             }
 
             if (_captureWriter != null)
@@ -75,9 +79,10 @@ namespace LastNetworkSniffer
                 _captureWriter = null;
             }
         }
+
         private async void Repeat()
         {
-            while(_isCapturing)
+            while (_isCapturing)
             {
                 Capture();
                 Thread.Sleep(100);
@@ -85,22 +90,22 @@ namespace LastNetworkSniffer
                 Thread.Sleep(100);
             }
         }
+
         private void InitializeListView()
         {
-            // Thêm các cột vào ListView
             listViewPackets.Columns.Add("Time", 150);
             listViewPackets.Columns.Add("Source", 150);
             listViewPackets.Columns.Add("Destination", 150);
             listViewPackets.Columns.Add("Protocol", 150);
-            listViewPackets.Columns.Add("Length", 150);
+            listViewPackets.Columns.Add("Length", 100);
+            listViewPackets.Columns.Add("Content", 50);
 
-            // Chế độ xem của ListView là Details
             listViewPackets.View = View.Details;
             listViewPackets.FullRowSelect = true;
         }
+
         private void OnPacketArrival(object sender, PacketCapture e)
         {
-
             var rawPacket = e.GetPacket();
             var packet = PacketDotNet.Packet.ParsePacket(rawPacket.LinkLayerType, rawPacket.Data);
             var time = rawPacket.Timeval.Date.ToString("yyyy-MM-dd HH:mm:ss");
@@ -109,6 +114,7 @@ namespace LastNetworkSniffer
             string source = "";
             string destination = "";
             string protocol = "";
+            string payload = "";
 
             if (packet is EthernetPacket ethernetPacket)
             {
@@ -116,11 +122,8 @@ namespace LastNetworkSniffer
                 {
                     source = ipPacket.SourceAddress.ToString();
                     destination = ipPacket.DestinationAddress.ToString();
-                    if (ipPacket.Protocol.ToString() == "TCP")                   
-                        protocol = "TCP";                   
-                    else if (ipPacket.Protocol.ToString() == "UDP")
-                        protocol = "UDP";
-                    else protocol = "Other";
+                    protocol = ipPacket.Protocol.ToString();
+                    payload = ipPacket.PayloadPacket.ToString();
                 }
                 else if (ethernetPacket.PayloadPacket is IPv6Packet ipv6Packet)
                 {
@@ -130,7 +133,6 @@ namespace LastNetworkSniffer
                 }
             }
 
-            // Add packet details to ListView
             listViewPackets.Invoke(new Action(() =>
             {
                 ListViewItem item = new ListViewItem(time);
@@ -138,21 +140,36 @@ namespace LastNetworkSniffer
                 item.SubItems.Add(destination);
                 item.SubItems.Add(protocol);
                 item.SubItems.Add(size.ToString());
-                item.SubItems.Add(packet.PayloadData.ToString());
+                item.SubItems.Add(payload);
                 listViewPackets.Items.Add(item);
             }));
 
-            // Write packet to capture file
             _captureWriter.Write(rawPacket);
         }
+
         private void listViewPackets_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewPackets.SelectedItems.Count > 0)
             {
-                var packet = listViewPackets.SelectedItems[0].SubItems[5].Text;
-                textBoxDetails.Text = packet;
+                var payload = listViewPackets.SelectedItems[0].SubItems[5].Text;
+                textBoxDetails.Text = payload;
+
+                treeViewPacketDetails.Nodes.Clear();
+                var selectedItem = listViewPackets.SelectedItems[0];
+
+                TreeNode rootNode = new TreeNode("Packet Details");
+                rootNode.Nodes.Add("Time: " + selectedItem.SubItems[0].Text);
+                rootNode.Nodes.Add("Source: " + selectedItem.SubItems[1].Text);
+                rootNode.Nodes.Add("Destination: " + selectedItem.SubItems[2].Text);
+                rootNode.Nodes.Add("Protocol: " + selectedItem.SubItems[3].Text);
+                rootNode.Nodes.Add("Length: " + selectedItem.SubItems[4].Text);
+                rootNode.Nodes.Add("Payload: " + payload);
+
+                treeViewPacketDetails.Nodes.Add(rootNode);
+                treeViewPacketDetails.ExpandAll();
             }
         }
+
         private void SaveCapture_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
@@ -163,12 +180,12 @@ namespace LastNetworkSniffer
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Đổi tên tệp lưu từ mặc định thành tệp do người dùng chọn
                     File.Move("captured_packets.pcap", saveFileDialog.FileName);
                     MessageBox.Show("Packets saved successfully!");
                 }
             }
         }
+
         private void Sniffer_Load(object sender, EventArgs e)
         {
             InitializeListView();

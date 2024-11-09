@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\Code\\Visual Studio\\NT106-Group-23\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\testscan\\sniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|d:\\code\\visual studio\\nt106-group-23\\testscan\\sniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|solutionrelative:testscan\\sniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,8 +11,12 @@
       "RelativeMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|solutionrelative:testscan\\sniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|d:\\code\\visual studio\\nt106-group-23\\testscan\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\testscan\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|solutionrelative:testscan\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\testscan\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B1442E8-0A1F-44B6-AF1B-ECAAD493F12E}|TestScan\\TestScan.csproj|solutionrelative:testscan\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,10 +36,22 @@
               "RelativeDocumentMoniker": "TestScan\\Sniffer.cs",
               "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\TestScan\\Sniffer.cs",
               "RelativeToolTip": "TestScan\\Sniffer.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAiwJcAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwMIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T15:05:46.321Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\TestScan\\Program.cs",
+              "RelativeDocumentMoniker": "TestScan\\Program.cs",
+              "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\TestScan\\Program.cs",
+              "RelativeToolTip": "TestScan\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:23:56.406Z"
             },
             {
               "$type": "Document",

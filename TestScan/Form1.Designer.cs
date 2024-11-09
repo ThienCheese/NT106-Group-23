@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Địa chỉ IP");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Địa chỉ IP");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -157,7 +157,7 @@
             this.listViewIPs.BackColor = System.Drawing.Color.Bisque;
             this.listViewIPs.HideSelection = false;
             this.listViewIPs.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem3});
             this.listViewIPs.Location = new System.Drawing.Point(11, 326);
             this.listViewIPs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewIPs.Name = "listViewIPs";
@@ -233,8 +233,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtNetworkAddress);
             this.splitContainer1.Panel2.Controls.Add(this.txtSubnetMask);
             this.splitContainer1.Panel2.Controls.Add(this.txtCurrentIPAddress);
-            this.splitContainer1.Size = new System.Drawing.Size(347, 176);
-            this.splitContainer1.SplitterDistance = 148;
+            this.splitContainer1.Size = new System.Drawing.Size(342, 176);
+            this.splitContainer1.SplitterDistance = 114;
             this.splitContainer1.TabIndex = 16;
             // 
             // label7
