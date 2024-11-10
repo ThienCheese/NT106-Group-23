@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ScanAndSniff
 {
@@ -505,8 +506,8 @@ namespace ScanAndSniff
 
         private void listViewPackets_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnTextToHex.Enabled = false;
-            btnHexToText.Enabled = true;
+            btnTextToHex.Enabled = true;
+            btnHexToText.Enabled = false;
             if (listViewPackets.SelectedItems.Count > 0)
             {
                 treeViewPacketDetails.Nodes.Clear(); // Clear existing nodes
@@ -519,13 +520,16 @@ namespace ScanAndSniff
                 {
                     DisplayPacketDetails(new EthernetPacket(tcpTuple.Item1.Data), tcpTuple.Item1, tcpTuple.Item2);
                     // Hiển thị dữ liệu hex của gói TCP trong txtHexData
-                    rtxtHexData.Text = ConvertToHex(tcpTuple.Item1.Data);
+                    
+                    string temp = ConvertToHex(tcpTuple.Item1.Data);
+                    rtxtHexData.Text = HexToText(temp);
                 }
                 else if (packetData is Tuple<IPPacket, UDPPacket> udpTuple)
                 {
                     DisplayPacketDetails(new EthernetPacket(udpTuple.Item1.Data), udpTuple.Item1, udpTuple.Item2);
                     // Hiển thị dữ liệu hex của gói UDP trong txtHexData
-                    rtxtHexData.Text = ConvertToHex(udpTuple.Item1.Data);
+                    string temp = ConvertToHex(udpTuple.Item1.Data);
+                    rtxtHexData.Text = HexToText(temp);
                 }
             }
         }
@@ -579,6 +583,37 @@ namespace ScanAndSniff
             rtxtHexData.Text = HexToText(rtxtHexData.Text);
             btnTextToHex.Enabled = true;
             btnHexToText.Enabled = false;
+        }
+
+        private void saveBtt_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog1.FileName;
+
+                try
+
+                {
+                    using (StreamWriter writer = new StreamWriter(filePath))
+                    {
+                        // Write header row (optional)
+                        writer.WriteLine("No.,Time,Source,Source Port,Destination,Destination Port,Protocol,Packet Size");
+
+                        // Write captured packet data
+                        for (int i = 0; i < listViewPackets.Items.Count; i++)
+                        {
+                            var item = listViewPackets.Items[i];
+                            writer.WriteLine(string.Join(",", item.SubItems.Cast<ListViewItem.ListViewSubItem>().Select(x => x.Text)));
+                        }
+                    }
+
+                    MessageBox.Show("Packets saved successfully to " + filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving packets: " + ex.Message);
+                }
+            }
         }
     }
 }

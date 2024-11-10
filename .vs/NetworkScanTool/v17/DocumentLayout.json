@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "D:\\Code\\Visual Studio\\NT106-Group-23\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|d:\\code\\visual studio\\nt106-group-23\\scanandsniff\\networksniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\networksniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\scanandsniff\\selectinterfaceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\selectinterfaceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\scanandsniff\\selectinterfaceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\selectinterfaceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\scanandsniff\\networksniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\networksniffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|d:\\code\\visual studio\\nt106-group-23\\scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|d:\\code\\visual studio\\nt106-group-23\\scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\networkscantool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|D:\\Code\\Visual Studio\\NT106-Group-23\\scanandsniff\\selectinterfaceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E893E4F0-E024-4A01-B7B1-B3584216D772}|ScanAndSniff\\ScanAndSniff.csproj|solutionrelative:scanandsniff\\selectinterfaceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +38,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "NetworkScanTool.cs",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkScanTool.cs",
+              "RelativeDocumentMoniker": "ScanAndSniff\\NetworkScanTool.cs",
+              "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkScanTool.cs",
+              "RelativeToolTip": "ScanAndSniff\\NetworkScanTool.cs",
+              "ViewState": "AgIAAJMBAAAAAAAAAAAawMEBAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T16:20:58.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NetworkSniffer.cs",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkSniffer.cs",
+              "RelativeDocumentMoniker": "ScanAndSniff\\NetworkSniffer.cs",
+              "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkSniffer.cs",
+              "RelativeToolTip": "ScanAndSniff\\NetworkSniffer.cs",
+              "ViewState": "AgIAAN8BAAAAAAAAAAAhwP0BAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T16:11:37.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "SelectInterfaceForm.cs [Design]",
               "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\SelectInterfaceForm.cs",
               "RelativeDocumentMoniker": "ScanAndSniff\\SelectInterfaceForm.cs",
@@ -54,20 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NetworkScanTool.cs",
-              "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkScanTool.cs",
-              "RelativeDocumentMoniker": "ScanAndSniff\\NetworkScanTool.cs",
-              "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkScanTool.cs",
-              "RelativeToolTip": "ScanAndSniff\\NetworkScanTool.cs",
-              "ViewState": "AgIAAFMBAAAAAAAAAAAAwN8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T06:41:15.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "NetworkScanTool.cs [Design]",
               "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkScanTool.cs",
               "RelativeDocumentMoniker": "ScanAndSniff\\NetworkScanTool.cs",
@@ -79,40 +88,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NetworkSniffer.cs",
-              "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkSniffer.cs",
-              "RelativeDocumentMoniker": "ScanAndSniff\\NetworkSniffer.cs",
-              "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkSniffer.cs",
-              "RelativeToolTip": "ScanAndSniff\\NetworkSniffer.cs",
-              "ViewState": "AgIAAM4AAAAAAAAAAAAUwEABAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T07:42:14.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SelectInterfaceForm.cs",
-              "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\SelectInterfaceForm.cs",
-              "RelativeDocumentMoniker": "ScanAndSniff\\SelectInterfaceForm.cs",
-              "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\SelectInterfaceForm.cs",
-              "RelativeToolTip": "ScanAndSniff\\SelectInterfaceForm.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAwFMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T07:35:29.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "NetworkSniffer.cs [Design]",
               "DocumentMoniker": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkSniffer.cs",
               "RelativeDocumentMoniker": "ScanAndSniff\\NetworkSniffer.cs",
               "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\ScanAndSniff\\NetworkSniffer.cs [Design]",
               "RelativeToolTip": "ScanAndSniff\\NetworkSniffer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T07:37:49.424Z"
+              "WhenOpened": "2024-11-10T07:37:49.424Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

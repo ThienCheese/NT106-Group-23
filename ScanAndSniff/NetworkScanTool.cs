@@ -262,8 +262,8 @@ namespace ScanAndSniff
 
         private void btnStopPortScanandListen_Click(object sender, EventArgs e)
         {
-            if (cmbScanPortandListen.Text == "Quét cổng")
-            {
+            if (checkBoxPort.Checked)
+            {                
                 if (!isPortScanning) return;
                 cancelPortScanToken.Cancel();
                 isPortScanning = false;
@@ -271,7 +271,7 @@ namespace ScanAndSniff
                 btnStartPortScanandListen.Enabled = true; // Bật lại nút "Bắt đầu"
                 btnStopPortScanandListen.Enabled = false; // Vô hiệu hóa nút "Dừng"
             }
-            else if (cmbScanPortandListen.Text == "Lắng nghe thông điệp")
+            else if (checkBoxListen.Checked)
             {
                 cancellationTokenSource.Cancel();
                 btnStartPortScanandListen.Enabled = true; // Bật lại nút "Bắt đầu"
@@ -457,8 +457,9 @@ namespace ScanAndSniff
 
         private async void btnStartPortScanandListen_Click(object sender, EventArgs e)
         {
-            if (cmbScanPortandListen.Text == "Quét cổng")
+            if (checkBoxPort.Checked)
             {
+                
                 if (isPortScanning) return;
                 isPortScanning = true;
                 btnStartPortScanandListen.Enabled = false; // Vô hiệu hóa nút "Bắt đầu"
@@ -474,8 +475,9 @@ namespace ScanAndSniff
                 cancelPortScanToken = new CancellationTokenSource();
                 ThreadPool.QueueUserWorkItem(state => ExecutePortScan(ipAddressToScan, cancelPortScanToken.Token));
             }
-            else if (cmbScanPortandListen.Text == "Lắng nghe thông điệp")
+            else if (checkBoxListen.Checked)
             {
+                
                 SelectInterfaceForm selectInterfaceForm = new SelectInterfaceForm();
                 selectInterfaceForm.ShowDialog();
                 if (selectInterfaceForm.selectedIPAddress == null)
@@ -559,6 +561,16 @@ namespace ScanAndSniff
         {
             NetworkSniffer sni = new NetworkSniffer();
             sni.ShowDialog();
+        }
+
+        private void checkBoxPort_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxListen.Checked = false;
+        }
+
+        private void checkBoxListen_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxPort.Checked = false;
         }
     }
 }
