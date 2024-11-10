@@ -10,3 +10,15 @@ D:\VSCode 2022\Lap Trinh Mang Can Ban\Do An Tool Scan NetWork\NetworkScanTool\Sc
 D:\VSCode 2022\Lap Trinh Mang Can Ban\Do An Tool Scan NetWork\NetworkScanTool\ScanAndSniff\obj\Debug\ScanAndSniff.pdb
 D:\VSCode 2022\Lap Trinh Mang Can Ban\Do An Tool Scan NetWork\NetworkScanTool\ScanAndSniff\obj\Debug\ScanAndSniff.NetworkSniffer.resources
 D:\VSCode 2022\Lap Trinh Mang Can Ban\Do An Tool Scan NetWork\NetworkScanTool\ScanAndSniff\obj\Debug\ScanAndSniff.SelectInterfaceForm.resources
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\bin\Debug\ScanAndSniff.exe.config
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\bin\Debug\ScanAndSniff.exe
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\bin\Debug\ScanAndSniff.pdb
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.csproj.AssemblyReference.cache
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.NetworkScanTool.resources
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.NetworkSniffer.resources
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.Properties.Resources.resources
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.SelectInterfaceForm.resources
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.csproj.GenerateResource.cache
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.csproj.CoreCompileInputs.cache
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.exe
+D:\Code\Visual Studio\NT106-Group-23\ScanAndSniff\obj\Debug\ScanAndSniff.pdb
