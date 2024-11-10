@@ -176,11 +176,11 @@ namespace LastNetworkSniffer
             {
                 saveFileDialog.Filter = "PCAP Files|*.pcap";
                 saveFileDialog.Title = "Save Captured Packets";
-                saveFileDialog.FileName = "captured_packets.pcap";
+                
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    File.Move("captured_packets.pcap", saveFileDialog.FileName);
+                    
                     MessageBox.Show("Packets saved successfully!");
                 }
             }

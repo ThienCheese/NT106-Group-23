@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "TestScan\\Sniffer.cs",
               "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\TestScan\\Sniffer.cs",
               "RelativeToolTip": "TestScan\\Sniffer.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwMIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKYAAAAAAAAAAADwv7IAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T15:05:46.321Z",
               "EditorCaption": ""
@@ -62,8 +62,7 @@
               "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\TestScan\\Form1.cs [Design]",
               "RelativeToolTip": "TestScan\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:02:41.63Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-04T15:02:41.63Z"
             },
             {
               "$type": "Document",
@@ -74,8 +73,7 @@
               "ToolTip": "D:\\Code\\Visual Studio\\NT106-Group-23\\TestScan\\Sniffer.cs [Design]",
               "RelativeToolTip": "TestScan\\Sniffer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:00:57.042Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-04T15:00:57.042Z"
             }
           ]
         }
