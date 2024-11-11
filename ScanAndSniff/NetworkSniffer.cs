@@ -344,37 +344,84 @@ namespace ScanAndSniff
         {
             string protocol = txtSearch.Text.Trim().ToUpper();
 
-            // Sử dụng Task để chạy trong background thread
+            // Use Task to run on a background thread
             Task.Run(() =>
             {
-                // Lọc các gói tin từ packetBuffer
+                // Filter packets from packetBuffer based on protocol
                 var filteredPackets = packetBuffer.Where(ipPacket =>
                     string.IsNullOrEmpty(protocol) || ipPacket.Protocol.ToUpper() == protocol).ToList();
 
-                // Cập nhật giao diện người dùng từ UI thread
+                // Update UI on the main thread
                 Invoke(new Action(() =>
                 {
-                    listViewPackets.Items.Clear(); // Xóa danh sách cũ
+                    listViewPackets.Items.Clear(); // Clear previous list
 
-                    int displayPacketNumber = 1; // Khởi tạo chỉ số "No." từ 1
+                    int displayPacketNumber = 1; // Initialize "No." index from 1
 
                     foreach (var ipPacket in filteredPackets)
                     {
-                        ListViewItem item = new ListViewItem(new string[]
-                        {
-                    displayPacketNumber.ToString(),
-                    DateTime.Now.ToString("HH:mm:ss.fff"),
-                    ipPacket.SourceAddress.ToString(),
-                    ipPacket.SourcePort.ToString(),
-                    ipPacket.DestinationAddress.ToString(),
-                    ipPacket.DestinationPort.ToString(),
-                    ipPacket.Protocol,
-                    ipPacket.TotalLength.ToString()
-                        });
+                        // Assume ipPacket.Data contains the packet's data buffer
+                        byte[] buffer = ipPacket.Data;
+                        int offset = 0; // Set offset if needed based on packet data
+                        int size = buffer.Length;
 
-                        item.Tag = ipPacket; // Lưu thông tin gói tin vào Tag
+                        ListViewItem item;
+
+                        // Check if the protocol is TCP or UDP and parse accordingly
+                        if (ipPacket.Protocol == "TCP")
+                        {
+                            var tcpPacket = new TCPPacket(buffer, offset, size);
+                            item = new ListViewItem(new string[]
+                            {
+                        displayPacketNumber.ToString(),
+                        DateTime.Now.ToString("HH:mm:ss.fff"),
+                        ipPacket.SourceAddress.ToString(),
+                        tcpPacket.SourcePort.ToString(),
+                        ipPacket.DestinationAddress.ToString(),
+                        tcpPacket.DestinationPort.ToString(),
+                        ipPacket.Protocol,
+                        ipPacket.TotalLength.ToString()
+                            });
+
+                            item.Tag = Tuple.Create(ipPacket, tcpPacket); // Save packet info in Tag
+                        }
+                        else if (ipPacket.Protocol == "UDP")
+                        {
+                            var udpPacket = new UDPPacket(buffer, offset, size);
+                            item = new ListViewItem(new string[]
+                            {
+                        displayPacketNumber.ToString(),
+                        DateTime.Now.ToString("HH:mm:ss.fff"),
+                        ipPacket.SourceAddress.ToString(),
+                        udpPacket.SourcePort.ToString(),
+                        ipPacket.DestinationAddress.ToString(),
+                        udpPacket.DestinationPort.ToString(),
+                        ipPacket.Protocol,
+                        ipPacket.TotalLength.ToString()
+                            });
+
+                            item.Tag = Tuple.Create(ipPacket, udpPacket); // Save packet info in Tag
+                        }
+                        else
+                        {
+                            // For non-TCP/UDP packets, display generic info
+                            item = new ListViewItem(new string[]
+                            {
+                        displayPacketNumber.ToString(),
+                        DateTime.Now.ToString("HH:mm:ss.fff"),
+                        ipPacket.SourceAddress.ToString(),
+                        "", // No port for non-TCP/UDP
+                        ipPacket.DestinationAddress.ToString(),
+                        "", // No port for non-TCP/UDP
+                        ipPacket.Protocol,
+                        ipPacket.TotalLength.ToString()
+                            });
+
+                            item.Tag = ipPacket; // Save packet info in Tag
+                        }
+
                         listViewPackets.Items.Add(item);
-                        displayPacketNumber++; // Tăng chỉ số cho gói tin tiếp theo
+                        displayPacketNumber++; // Increment packet number
                     }
                 }));
             });
