@@ -10,6 +10,9 @@ Ngày thuyết trình : 14/11/2024
     + Lắng nghe thông điệp
     + Bắt các gói tin trong mạng LAN
 
+Để có thể xem nội dung của dự án, vui lòng chuyển sang nhánh *--ProjectNetworkScanTool--*
+
+
 Người đóng góp:
   - Đoàn Thanh Đệ: 23520282
   - Nguyễn Thiện Chí: 23520178
