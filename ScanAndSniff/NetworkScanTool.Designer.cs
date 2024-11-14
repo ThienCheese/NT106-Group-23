@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Địa chỉ IP");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Địa chỉ IP");
             this.comboBoxNetworkInterfaces = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -118,7 +118,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtSubnetMask);
             this.splitContainer1.Panel2.Controls.Add(this.comboBoxNetworkInterfaces);
             this.splitContainer1.Size = new System.Drawing.Size(326, 219);
-            this.splitContainer1.SplitterDistance = 120;
+            this.splitContainer1.SplitterDistance = 109;
             this.splitContainer1.TabIndex = 15;
             // 
             // label2
@@ -160,7 +160,7 @@
             // txtNetworkAddress
             // 
             this.txtNetworkAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNetworkAddress.Location = new System.Drawing.Point(10, 123);
+            this.txtNetworkAddress.Location = new System.Drawing.Point(10, 171);
             this.txtNetworkAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNetworkAddress.Name = "txtNetworkAddress";
             this.txtNetworkAddress.ReadOnly = true;
@@ -180,7 +180,7 @@
             // txtSubnetMask
             // 
             this.txtSubnetMask.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubnetMask.Location = new System.Drawing.Point(10, 166);
+            this.txtSubnetMask.Location = new System.Drawing.Point(10, 128);
             this.txtSubnetMask.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSubnetMask.Name = "txtSubnetMask";
             this.txtSubnetMask.ReadOnly = true;
@@ -222,7 +222,7 @@
             this.listViewIPs.BackColor = System.Drawing.Color.Bisque;
             this.listViewIPs.HideSelection = false;
             this.listViewIPs.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem11});
+            listViewItem2});
             this.listViewIPs.Location = new System.Drawing.Point(6, 428);
             this.listViewIPs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewIPs.Name = "listViewIPs";

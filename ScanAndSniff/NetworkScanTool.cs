@@ -138,8 +138,8 @@ namespace ScanAndSniff
                 if (isScanning) return;
 
                 isScanning = true;
-                btnStartScan.Enabled = false; // Vô hiệu hóa nút "Bắt đầu tìm"
-                btnStopScan.Enabled = true; // Bật nút "Dừng tìm"
+                btnStartScan.Enabled = false; // Disable "Start Scan" button
+                btnStopScan.Enabled = true; // Enable "Stop Scan" button
 
                 // Lấy thông tin giao diện mạng từ ComboBox
                 string selectedInterface = comboBoxNetworkInterfaces.SelectedItem.ToString();
@@ -154,36 +154,18 @@ namespace ScanAndSniff
                     return;
                 }
 
-                // Lấy thông tin IP và subnet mask từ giao diện mạng
-                var ipProperties = networkInterface.GetIPProperties();
-                var unicastAddress = ipProperties.UnicastAddresses
-                                                 .FirstOrDefault(addr => addr.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
+                // Lấy giá trị địa chỉ mạng và subnet mask từ TextBox
+                string networkAddressStr = txtNetworkAddress.Text;
+                string subnetMaskStr = txtSubnetMask.Text;
 
-                if (unicastAddress == null)
+                if (string.IsNullOrEmpty(networkAddressStr) || string.IsNullOrEmpty(subnetMaskStr))
                 {
-                    MessageBox.Show("Không tìm thấy địa chỉ IP hợp lệ cho giao diện mạng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Địa chỉ mạng hoặc subnet mask không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Lấy địa chỉ IP và subnet mask
-                IPAddress ipAddress = unicastAddress.Address;
-                IPAddress subnetMask = unicastAddress.IPv4Mask;
-
-                // Tính toán địa chỉ mạng
-                byte[] ipBytes = ipAddress.GetAddressBytes();
-                byte[] subnetMaskBytes = subnetMask.GetAddressBytes();
-                byte[] networkAddressBytes = new byte[ipBytes.Length];
-
-                for (int i = 0; i < ipBytes.Length; i++)
-                {
-                    networkAddressBytes[i] = (byte)(ipBytes[i] & subnetMaskBytes[i]);
-                }
-
-                IPAddress networkAddress = new IPAddress(networkAddressBytes);
-
-                // Hiển thị địa chỉ mạng và subnet mask vào các TextBox
-                txtNetworkAddress.Text = networkAddress.ToString();  // Địa chỉ mạng
-                txtSubnetMask.Text = subnetMask.ToString();          // Subnet mask
+                IPAddress networkAddress = IPAddress.Parse(networkAddressStr);
+                IPAddress subnetMask = IPAddress.Parse(subnetMaskStr);
 
                 // Tính toán địa chỉ mạng cơ sở và số lượng IP cần quét
                 var ipRange = GetIpRange(networkAddress.ToString(), subnetMask.ToString());
