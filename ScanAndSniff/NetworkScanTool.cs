@@ -341,17 +341,16 @@ namespace ScanAndSniff
                 {
                     // Cố gắng kết nối đến địa chỉ IP và cổng
                     var result = tcpClient.BeginConnect(ipAddressToScan, portDetail.PortNumber, null, null);
-                    bool success = result.AsyncWaitHandle.WaitOne(500); // Chờ 500ms để kết nối
+                    bool success = result.AsyncWaitHandle.WaitOne(); 
 
                     if (success && tcpClient.Connected)
                     {
                         // Nếu kết nối thành công, hiển thị thông tin cổng mở
-                        Invoke(new Action(() =>
-                        {
-                            txtLogPortScanandListen.AppendText($"Cổng: {portDetail.PortNumber}\r\n");
-                            txtLogPortScanandListen.AppendText($"Giao thức: {portDetail.ProtocolType}\r\n");
-                            txtLogPortScanandListen.AppendText($"Dịch vụ: {portDetail.ServiceName}\r\n\r\n");
-                        }));
+                        
+                        txtLogPortScanandListen.AppendText($"Cổng: {portDetail.PortNumber}\r\n");
+                        txtLogPortScanandListen.AppendText($"Giao thức: {portDetail.ProtocolType}\r\n");
+                        txtLogPortScanandListen.AppendText($"Dịch vụ: {portDetail.ServiceName}\r\n\r\n");
+                        
                     }
                 }
             }
