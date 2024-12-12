@@ -323,13 +323,10 @@ namespace ScanAndSniff
                 ScanSinglePort(ipAddressToScan, portDetail);
             }
             // Kết thúc quá trình quét
-            Invoke(new Action(() =>
-            {
-                isPortScanning = false;
-                btnStartPortScanandListen.Enabled = true; // Bật lại nút "Bắt đầu"
-                btnStopPortScanandListen.Enabled = false; // Vô hiệu hóa nút "Dừng"
-                txtLogPortScanandListen.AppendText($"======== Quét cổng của địa chỉ {ipAddressToScan} hoàn tất! ========\r\n\r\n");
-            }));
+            isPortScanning = false;
+            btnStartPortScanandListen.Enabled = true; // Bật lại nút "Bắt đầu"
+            btnStopPortScanandListen.Enabled = false; // Vô hiệu hóa nút "Dừng"
+            txtLogPortScanandListen.AppendText($"======== Quét cổng của địa chỉ {ipAddressToScan} hoàn tất! ========\r\n\r\n");
         }
 
         // Hàm quét một cổng
